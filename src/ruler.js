@@ -114,9 +114,7 @@ export function extendRuler() {
 
 			// Compute the measurement destination, segments, and distance
 			const d = this._getMeasurementDestination(destination);
-			if (this.destination && d.x === this.destination.x && d.y === this.destination.y) {
-				this.performPostPathfindingActions(options);
-				return;
+			  if (d.x === destination.x && d.y === destination.y) return;
 			}
 			this.destination = d;
 
